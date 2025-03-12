@@ -1,0 +1,47 @@
+@use "sass:color";
+@use 'variables' as vars;
+@use 'utilities/mixins' as mixin;
+@use 'utilities/functions';
+@use 'layout/grid';
+@use 'layout/flexbox';
+@use 'components/product-card';
+@use 'components/navbar';
+@use 'partials/footer.scss';
+
+body {
+  font-family: vars.$font-family;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #{vars.$primary-color};
+}
+
+.button {
+  @include mixin.box-shadow(vars.$primary-color);
+  padding: calculate-spacing(0.5);
+  background-color: vars.$primary-color;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: color.adjust(vars.$primary-color, $lightness: -10%);
+}
+
+%rounded-corners {
+  border-radius: 10px;
+}
+
+.card {
+  @extend %rounded-corners;
+  background-color: white;
+  padding: vars.$spacing;
+}
+
+#dynamic-selector {
+  background-color: #{'red'};
+}

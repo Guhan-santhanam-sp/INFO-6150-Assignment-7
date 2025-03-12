@@ -1,0 +1,55 @@
+@use '../variables.scss' as vars;
+@use 'sass:math';
+
+
+.flex-container {
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+  }
+  
+  .flex-item {
+    margin-right: vars.$spacing;
+  }
+
+  .button{
+    a{
+      text-decoration: none;
+      all:unset;
+
+    }
+  }
+
+  .why-choose-us {
+    background-color: #e6f7ff;
+    padding: vars.$spacing;
+  
+    h2 {
+      text-align: center;
+      margin-bottom: vars.$spacing;
+    }
+  
+    .flex-container {
+      display: flex;
+      justify-content: space-around;
+  
+      .flex-item {
+        background-color: #fff;
+        padding: vars.$spacing;
+        border-radius: math.div(vars.$spacing , 2);
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        
+  
+        h3 {
+          color: vars.$primary-color;
+          margin-bottom: math.div(vars.$spacing , 2);
+        }
+  
+        p {
+          color: vars.$secondary-color;
+        }
+      }
+    }
+  }
+  

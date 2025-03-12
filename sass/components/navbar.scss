@@ -1,0 +1,26 @@
+@use '../utilities/mixins' as mixin;
+@use '../variables' as vars;
+@use '../layout/flexbox';
+
+.navbar {
+    @extend .flex-container;
+    padding: vars.$spacing;
+    background-color: vars.$primary-color;
+    color: white;
+  }
+  
+  .nav-item {
+    @extend .flex-item;
+    border: 1px 1px 1px solid black;
+    justify-content: space-around;
+    text-decoration: none;
+    all: unset;
+    
+  }
+  
+  .nav-item:hover {     
+    text-decoration: underline;
+    cursor: pointer;
+    
+  }
+  
