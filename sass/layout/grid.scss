@@ -1,0 +1,46 @@
+@use '../variables.scss' as vars;
+@use 'sass:math';
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: vars.$spacing;
+  }
+  
+  .grid-item {
+    background-color: #ddd;
+    padding: vars.$spacing;
+  }
+
+  .hero-section {
+    background-color: #f9f9f9;
+    padding: vars.$spacing;
+  
+    .grid-item {
+      padding: vars.$spacing;
+    }
+  }
+  
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: vars.$spacing;
+  
+    .testimonial-card {
+      background-color: #fff;
+      padding: vars.$spacing;    
+      border-radius: math.div(vars.$spacing, 2);
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+  
+      p {
+        font-style: italic;
+        margin-bottom: math.div(vars.$spacing, 2);
+      }
+  
+      h4 {
+        font-weight: bold;
+        color: vars.$secondary-color;
+      }
+    }
+  }
+  

@@ -1,0 +1,21 @@
+@use '../utilities/mixins' as mixin;
+@use '../variables' as vars;
+@use '../layout/grid';
+
+.product-card {
+    @extend .grid-item;
+    @include mixin.rounded-corners(10px);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: vars.$spacing;
+  }
+  
+  .product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: vars.$spacing;
+  }
+  

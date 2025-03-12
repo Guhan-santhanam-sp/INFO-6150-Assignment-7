@@ -1,0 +1,4 @@
+@function calculate-spacing($multiplier) {
+    @return $spacing * $multiplier;
+  }
+  
